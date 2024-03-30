@@ -3,6 +3,7 @@
 
 
 #Python program to find maximum between three numbers
+# klasik if else yöntemi
 
 import random as rnd
 
@@ -39,8 +40,14 @@ elif num3 > num1 and num3 > num2:
         print(num2, end=" > ")
         print(num1)
 
+# ileri yöntem
 
+rastgele_listem = [rnd.randint(a=1,b=200) for i in range(10)]
+print(rastgele_listem)
 
+for i in range(len(rastgele_listem)-1):
+    print(max(rastgele_listem), end=" > ")
+    rastgele_listem.remove(max(rastgele_listem))
 
 
 
