@@ -48,9 +48,14 @@ print(rastgele_listem)
 for i in range(len(rastgele_listem)-1):
     print(max(rastgele_listem), end=" > ")
     rastgele_listem.remove(max(rastgele_listem))
+print()
+# daha ileri yöntem
 
 
+numbers = [rnd.randint(1, 200) for _ in range(3)]
+numbers.sort(reverse=True)
 
+print(" > ".join(map(str, numbers)))
 
 
 
