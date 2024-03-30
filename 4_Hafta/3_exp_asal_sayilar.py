@@ -11,10 +11,16 @@ def asalmi(number):
 
     return True
 
-
+s = 0
 for i in range(start,stop+1):
     if asalmi(i):
         print(i, end=" ")
+        s +=1
+        if s%10 == 0:
+            print()
+
+    if s == 100:
+        exit()
 
 
 
