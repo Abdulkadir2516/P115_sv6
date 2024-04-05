@@ -1,5 +1,7 @@
+import datetime
 
 start,stop= input("2 sayı aralığı girin 5-15: ").split("-")
+print(datetime.datetime.now())
 
 start,stop = int(start),int(stop)
 
@@ -19,12 +21,13 @@ for i in range(start,stop+1):
         if s%10 == 0:
             print()
 
-    if s == 100:
-        exit()
+    #if s == 100:
+    #    exit()
 
 
 
 
+print(datetime.datetime.now())
 
 
 
