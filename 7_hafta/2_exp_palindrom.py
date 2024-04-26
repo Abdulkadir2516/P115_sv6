@@ -16,3 +16,12 @@ for i in range(100, 1000):
         en_buyuk_palindrom = i * s if palindrom_mu(i * s) and (i*s) > en_buyuk_palindrom else en_buyuk_palindrom
 
 print("En büyük palindrom : ", en_buyuk_palindrom)
+
+
+import numpy as np
+
+dizi = np.asarray([(lambda x: range(x, x+6))(x) for x in range(0, 51, 10)])
+
+print(dizi)
+
+
