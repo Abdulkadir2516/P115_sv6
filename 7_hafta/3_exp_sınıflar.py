@@ -17,7 +17,12 @@ deneme = Ogrenci()
 
 print(type(deneme))
 
+"""
+Ödev 
+Rastgele 20 elemanli bir diziyi kendi yöntemleriniz ile sıralama işlemi gerçekleştirin
+sort metodu kullanmak yasak
 
+"""
 
 
 
