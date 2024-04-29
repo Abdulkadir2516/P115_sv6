@@ -1,6 +1,6 @@
 import datetime
 
-start,stop= input("2 sayı aralığı girin 5-15: ").split("-")
+start,stop= 0,100000 #input("2 sayı aralığı girin 5-15: ").split("-")
 print(datetime.datetime.now())
 
 start,stop = int(start),int(stop)
