@@ -14,6 +14,7 @@ class canlılar:
     def beslenme(self, besin_türü):
         self.besin_turu = besin_türü
         print(f"{besin_türü} şeklinde beslenir.")
+        print("{} şeklinde beslenir.".format(besin_türü))
 
 class cok_hucreli_canlılar(canlılar):
     def __init__(self, id):
