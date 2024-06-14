@@ -1,7 +1,7 @@
 import cv2 as cv
 import numpy as np
 
-img = np.zeros((127*6,255*6,3), dtype="uint8")
+img = np.zeros((127,255*6,3), dtype="uint8")
 renk = 0
 for i in range(img.shape[1]):
     if renk % 255 == 0:
@@ -21,12 +21,32 @@ for i in range(img.shape[1]):
     elif i<255*6:
         img[::,i] = [255-renk,0,255]
 
+cv.imshow("img",img)
+
 renk = 0
 for i in range(img.shape[0]):
-    if renk % 255 == 0:
-        renk = 0
-    renk+=1 
 
-cv.imshow("img",img)
+    if renk % 127 == 0:
+        renk = 0
+    renk += 1
+
+    for j in range(img.shape[1]):
+
+        b,g,r = img[0,j]
+
+        if j < 255 * 1:
+            img[i, j] = [b + renk, g + renk, r - renk]
+        elif j < 255 * 2:
+            img[i, j] = [b + renk, g - renk, r - renk]
+        elif j < 255 * 3:
+            img[i, j] = [b + renk, g - renk, r + renk]
+        elif j < 255 * 4:
+            img[i, j] = [b - renk, g - renk, r + renk]
+        elif j < 255 * 5:
+            img[i, j] = [b - renk, g + renk, r + renk]
+        elif j < 255 * 6:
+            img[i, j] = [b - renk, g + renk, r - renk]
+
+cv.imshow("img2",img)
 
 cv.waitKey()
