@@ -14,6 +14,12 @@ cv.circle(smile,(300,150),80,[0,0,0],3)
 cv.circle(smile,(700,150),80,[255,0,0],-1)
 cv.circle(smile,(700,150),80,[0,0,0],3)
 
+# Üçgenin köşe noktalarını tanımla
+points = np.array([[500,200],[550,300],[450,300]])
+
+# Üçgeni çiz
+cv.polylines(smile, [points], isClosed=True, color=(0, 255, 0), thickness=3)
+
 cv.imshow("smile2", smile)
 
 
