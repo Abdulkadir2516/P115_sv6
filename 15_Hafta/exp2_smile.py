@@ -17,6 +17,9 @@ cv.circle(smile,(700,150),80,[0,0,0],3)
 # Üçgenin köşe noktalarını tanımla
 points = np.array([[500,200],[550,300],[450,300]])
 
+cv.ellipse(smile, (500,400), (50,300), 90,0,360, (255,0,0), thickness=5 )
+
+cv.putText(smile, "Hello world", (400,420), color=(255,0,0), fontFace=1, fontScale=3, thickness=3)
 # Üçgeni çiz
 cv.polylines(smile, [points], isClosed=True, color=(0, 255, 0), thickness=3)
 
